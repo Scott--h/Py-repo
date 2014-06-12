@@ -1,11 +1,7 @@
 import lcm
+import numpy as np
 from asvlcm import sound_t
 from asvPylib import get_utime
-
-
-lcm = lcm.LCM()
-sound = sound_t()
-sound.utime = get_utime()
 
 
 def phasediff(sig, deltaT, hydrod):
@@ -28,3 +24,18 @@ def jEval(sig, sigpulselength, delta):
         jsum = sig(delta + i) * ideal(i)
     return jsum
 
+
+
+class soundD:
+
+    def __init__(self):
+
+        self.lcm = lcm.LCM()
+        self.sound = sound_t()
+        self.utime = get_utime()
+
+
+    def sound_handler(self, channel, data):
+
+        msg = sound_t().decode(data)
+        self.raw = [msg.]
