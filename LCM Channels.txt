@@ -1,0 +1,7 @@
+SOUND - sound_t() - unfiltered data from hydrophones
+PINGER - pinger_t() not used no mo
+GPS - gps_t() - current GPS location
+MOTOR_STATUS - motorStatus_t() - current motor status from the
+MOTOR_CONFIG - motorConfig_t() -  
+BOUY_MAP - collection of Buoy_t() structures
+TRACKING_STATE - vehicleState_t() - combination of all GPS and
